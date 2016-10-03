@@ -280,10 +280,10 @@
 		>;
 	};
 
-	i2c0_pins: pinmux_i2c0_pins {
+	i2c1_pins: pinmux_i2c1_pins {
 		pinctrl-single,pins = <
-			0x188 (PIN_INPUT_PULLUP | MUX_MODE0)	/* i2c0_sda.i2c0_sda */
-			0x18c (PIN_INPUT_PULLUP | MUX_MODE0)	/* i2c0_scl.i2c0_scl */
+			0x158 (PIN_INPUT_PULLUP | MUX_MODE2)	/* spi0_d1.i2c1_sda */
+			0x15c (PIN_INPUT_PULLUP | MUX_MODE2)	/* spi0_cs0.i2c1_scl */
 		>;
 	};
 
@@ -436,9 +436,9 @@
 	status = "okay";
 };
 
-&i2c0 {
+&i2c1 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&i2c0_pins>;
+	pinctrl-0 = <&i2c1_pins>;
 
 	status = "okay";
 	clock-frequency = <400000>;
