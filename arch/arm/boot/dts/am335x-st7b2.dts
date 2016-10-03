@@ -388,7 +388,7 @@
 
 	mmc1_pins: pinmux_mmc1_pins {
 		pinctrl-single,pins = <
-			0x160 (PIN_INPUT | MUX_MODE7) /* spi0_cs1.gpio0_6 */
+			0x134 (PIN_INPUT | MUX_MODE7) /* mii1_rxd3.gpio2_18 */
 		>;
 	};
 
@@ -605,7 +605,7 @@
 	bus-width = <4>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&mmc1_pins>;
-	cd-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+	cd-gpios = <&gpio2 18 GPIO_ACTIVE_LOW>;
 };
 
 &sham {
