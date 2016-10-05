@@ -402,7 +402,7 @@
 };
 
 &cpsw_emac0 {
-	phy_id = <&davinci_mdio>, <0>;
+	phy_id = <&davinci_mdio>, <5>;
 	phy-mode = "rmii";
 	dual_emac_res_vlan = <1>;
 };
