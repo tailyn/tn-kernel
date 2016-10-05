@@ -67,6 +67,107 @@
 		regulator-boot-on;
 		enable-active-high;
 	};
+
+	gpio-edm {
+		compatible = "gpio-edm";
+
+		gp_in0 {
+			label = "GP_IN0";
+			gpios = <&tca6416 0 0>;
+			dir   = "in";
+		};
+
+		gp_in1 {
+			label = "GP_IN1";
+			gpios = <&tca6416 1 0>;
+			dir   = "in";
+		};
+
+		gp_in2 {
+			label = "GP_IN2";
+			gpios = <&tca6416 2 0>;
+			dir   = "in";
+		};
+
+		gp_in3 {
+			label = "GP_IN3";
+			gpios = <&tca6416 3 0>;
+			dir   = "in";
+		};
+
+		gp_out0 {
+			label = "GP_OUT0";
+			gpios = <&tca6416 4 0>;
+			dir   = "out";
+		};
+
+		gp_out1 {
+			label = "GP_OUT1";
+			gpios = <&tca6416 5 0>;
+			dir   = "out";
+		};
+
+		gp_out2 {
+			label = "GP_OUT2";
+			gpios = <&tca6416 6 0>;
+			dir   = "out";
+		};
+
+		gp_out3 {
+			label = "GP_OUT3";
+			gpios = <&tca6416 7 0>;
+			dir   = "out";
+		};
+
+		mode_a0 {
+			label = "MODEA0";
+			gpios = <&tca6416 8 1>;
+			dir   = "out";
+		};
+
+		mode_a1 {
+			label = "MODEA1";
+			gpios = <&tca6416 9 0>;
+			dir   = "out";
+		};
+
+		mode_a2 {
+			label = "MODEA2";
+			gpios = <&tca6416 10 0>;
+			dir   = "out";
+		};
+
+		mode_a3 {
+			label = "MODEA3";
+			gpios = <&tca6416 11 0>;
+			dir   = "out";
+		};
+
+		mode_b0 {
+			label = "MODEB0";
+			gpios = <&tca6416 12 1>;
+			dir   = "out";
+		};
+
+		mode_b1 {
+			label = "MODEB1";
+			gpios = <&tca6416 13 0>;
+			dir   = "out";
+		};
+
+		mode_b2 {
+			label = "MODEB2";
+			gpios = <&tca6416 14 0>;
+			dir   = "out";
+		};
+
+		mode_b3 {
+			label = "MODEB3";
+			gpios = <&tca6416 15 0>;
+			dir   = "out";
+		};
+
+	};
 };
 
 &am33xx_pinmux {
