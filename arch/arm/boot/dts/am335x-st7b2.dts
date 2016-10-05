@@ -138,6 +138,12 @@
 		>;
 	};
 
+	tps65910_pins:  pinmux_tps65910_pins {
+		pinctrl-single,pins = <
+			0x078 (PIN_INPUT_PULLUP | MUX_MODE7)      /* gpmc_ben1.gpio1_28 */
+		>;
+	};
+
 	i2c1_pins: pinmux_i2c1_pins {
 		pinctrl-single,pins = <
 			0x158 (PIN_INPUT_PULLUP | MUX_MODE2)	/* spi0_d1.i2c1_sda */
@@ -256,6 +262,10 @@
 	status = "okay";
 };
 
+&rtc {
+	status = "disabled";
+};
+
 &i2c1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c1_pins>;
@@ -265,6 +275,10 @@
 
 	tps: tps@2d {
 		reg = <0x2d>;
+		interrupt-parent = <&gpio1>;
+		interrupts = <28 GPIO_ACTIVE_LOW>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&tps65910_pins>;
 	};
 };
 
