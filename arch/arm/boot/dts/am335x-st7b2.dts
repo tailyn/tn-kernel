@@ -280,6 +280,14 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&tps65910_pins>;
 	};
+
+	tca6416:gpio@20 {
+		compatible = "ti,tca6416";
+		gpio-controller;
+		#gpio-cells = <2>;
+		#interrupt-cells = <2>;
+		reg = <0x20>;
+	};
 };
 
 &usb {
