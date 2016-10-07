@@ -559,14 +559,6 @@
 	cd-gpios = <&gpio2 18 GPIO_ACTIVE_LOW>;
 };
 
-&sham {
-	status = "okay";
-};
-
-&aes {
-	status = "okay";
-};
-
 &gpio0 {
 	ti,no-reset-on-init;
 };
