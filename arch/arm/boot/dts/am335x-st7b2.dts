@@ -546,6 +546,8 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&mmc2_pins>;
 
+	#address-cells = <1>;
+	#size-cells = <0>;
 	wlcore: wlcore@2 {
 		compatible = "ti,wl1831";
 		reg = <2>;
