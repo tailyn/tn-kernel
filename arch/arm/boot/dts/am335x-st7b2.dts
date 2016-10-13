@@ -389,7 +389,8 @@
 };
 
 &rtc {
-	status = "disabled";
+	system-power-controller;
+	status = "okay";
 };
 
 &i2c1 {
