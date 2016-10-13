@@ -168,11 +168,40 @@
 			dir   = "out";
 		};
 
+		app_led {
+			label = "APP_LED";
+			gpios = <&gpio0 17 1>;
+			dir   = "out";
+		};
+
+		wlan_led {
+                        label = "WLAN_LED";
+                        gpios = <&gpio0 16 1>;
+                        dir   = "out";
+                };
+
+		pwr_led {
+                        label = "PWR_LED";
+                        gpios = <&gpio3 0 0>;
+                        dir   = "out";
+                };
+
+
+
 	};
 };
 
 &am33xx_pinmux {
 	pinctrl-names = "default";
+	pinctrl-0 = <&st7b2_led_gpio>;
+
+        st7b2_led_gpio: st7b2_led_gpio {
+                pinctrl-single,pins = <
+			0x120 (PIN_OUTPUT_PULLDOWN | MUX_MODE7) /* mii1_txd2.gpio0_17*/
+			0x11c (PIN_OUTPUT_PULLDOWN | MUX_MODE7) /* mii1_txd3.gpio0_16 */
+			0x108 (PIN_OUTPUT_PULLDOWN | MUX_MODE7) /* mii1_col.gpio3_0 */
+                >;
+        };
 
 	lcd_pins_sleep: lcd_pins_sleep {
 		pinctrl-single,pins = <
@@ -671,4 +700,5 @@
 		};
 	};
 };
+                       
 
